@@ -8,7 +8,7 @@ urlpatterns = patterns('',
 	url(r'^$','principal.views.lista_bebidas'),
 	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^admin/', include(admin.site.urls)),
-	url(r'^media/(?P.*)$','django.views.static.serve',
+	url(r'^media/(?P<path>.*)$','django.views.static.serve',
 		{'document_root':settings.MEDIA_ROOT,}
 	),
 )
